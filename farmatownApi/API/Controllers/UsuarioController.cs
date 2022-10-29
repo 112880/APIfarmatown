@@ -17,23 +17,21 @@ public class UsuarioController : ControllerBase
   }
 
      [HttpPost("login")]
-    public async Task<ActionResult<UsuarioModel>> LogearUsuario(UsuarioModel userModel)
+    public async Task<ActionResult<UsuarioRetornoModel>> LogearUsuario(UsuarioModel userModel)
     {
         var user = _context.Usuarios.SingleOrDefault(x => x.Usuario1 == userModel.usuario && x.Pwd == userModel.pwd);
 
         if (user == null || user.IdTipoUsuario != 1)
         {
             return Unauthorized($"Usuario o contraseña incorrecta");
-        }      
-
-           var usr = new UsuarioModel
-        {            
-            usuario = user.Usuario1,
-            pwd = user.Pwd                  
+        }  else    {            
+            var usr = new UsuarioRetornoModel();
+            usr.idTipoUsuario = user.IdTipoUsuario;
+            usr.usuario = user.Usuario1;
+            return Ok(usr);                 
         }; 
 
-        await _context.SaveChangesAsync();
-        return Ok(usr);        
+             
     }
 
 }

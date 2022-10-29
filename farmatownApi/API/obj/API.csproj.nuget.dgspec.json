@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "f:\\Repositorios\\APIfarmatown\\farmatownApi\\API\\API.csproj": {}
+    "c:\\Users\\Francisco\\Desktop\\farmatown\\REPOSITORIO FARMATOWN\\APIfarmatown\\farmatownApi\\API\\API.csproj": {}
   },
   "projects": {
-    "f:\\Repositorios\\APIfarmatown\\farmatownApi\\API\\API.csproj": {
+    "c:\\Users\\Francisco\\Desktop\\farmatown\\REPOSITORIO FARMATOWN\\APIfarmatown\\farmatownApi\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\Repositorios\\APIfarmatown\\farmatownApi\\API\\API.csproj",
+        "projectUniqueName": "c:\\Users\\Francisco\\Desktop\\farmatown\\REPOSITORIO FARMATOWN\\APIfarmatown\\farmatownApi\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "f:\\Repositorios\\APIfarmatown\\farmatownApi\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Klosazz\\.nuget\\packages\\",
-        "outputPath": "f:\\Repositorios\\APIfarmatown\\farmatownApi\\API\\obj\\",
+        "projectPath": "c:\\Users\\Francisco\\Desktop\\farmatown\\REPOSITORIO FARMATOWN\\APIfarmatown\\farmatownApi\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Francisco\\Desktop\\farmatown\\REPOSITORIO FARMATOWN\\APIfarmatown\\farmatownApi\\API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Klosazz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

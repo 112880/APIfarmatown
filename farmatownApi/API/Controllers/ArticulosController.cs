@@ -1,3 +1,4 @@
+using System.Xml.Schema;
 using API.Data;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -16,19 +17,14 @@ public class ArticulosController : ControllerBase
     _context=context;
   }
 
-  [HttpGet("obtenerArticuloDeDetalle")]
-  public async Task<ActionResult<DetalleLoteModel>>ArticuloDelDetalle(int idDetalle){
-    var articulos = await _context.DetalleLotes
-                        .Join(_context.Articulos,
-                        dl => dl.IdArticulo,
-                        a => a.IdArticulo,
-                        (dl,a) => new DetalleLoteModel{
-                          IdDetalleLote = dl.IdDetalleLote,
-                          NombreArticulo = a.Nombre,
-                          CantidadComprada = dl.CantidadComprada
-                        })
-                        .Where(x => x.IdDetalleLote == idDetalle)
-                        .ToListAsync();
+  [HttpGet("obtenerArticulos")]
+  public async Task<ActionResult<ArticuloModel>>Articulos(){
+    var articulos = await _context.Articulos
+                    .Select(x => new ArticuloModel {
+                      idArticulo = x.IdArticulo,
+                      nombreArticulo = x.Nombre
+                    })
+                    .ToListAsync();
     
     return Ok(articulos);
   }
